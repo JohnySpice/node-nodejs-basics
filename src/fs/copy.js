@@ -1,9 +1,10 @@
 import {readdir, copyFile, mkdir} from 'fs/promises';
-import {resolve} from 'path';
+import {dirname, resolve} from 'path';
 
 export const copy = async () => {
-    const sourceDirPath = resolve('src/fs/files');
-    const destDirPath = resolve('src/fs/files_copy');
+    const currentFolderPath = dirname(new URL(import.meta.url).pathname);
+    const sourceDirPath = resolve(currentFolderPath, 'files');
+    const destDirPath = resolve(currentFolderPath, 'files_copy');
     try {
         const filesNames = await readdir(sourceDirPath);
         await mkdir(destDirPath);

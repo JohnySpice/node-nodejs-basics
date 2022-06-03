@@ -1,8 +1,9 @@
 import {access, writeFile} from 'fs/promises';
-import {resolve} from 'path';
+import {dirname, resolve} from 'path';
 
 export const create = async () => {
-    const filePath = resolve('src/fs/files/fresh.txt');
+    const currentFolderPath = dirname(new URL(import.meta.url).pathname);
+    const filePath = resolve(currentFolderPath, 'files', 'fresh.txt');
     try {
         await access(filePath);
     } catch (e) {
