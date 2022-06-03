@@ -1,5 +1,5 @@
 import {access, writeFile} from 'fs/promises';
-import {resolve} from "path";
+import {resolve} from 'path';
 
 export const create = async () => {
     const filePath = resolve('src/fs/files/fresh.txt');

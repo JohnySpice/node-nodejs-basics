@@ -1,5 +1,5 @@
 import {readdir, copyFile, mkdir} from 'fs/promises';
-import {resolve} from "path";
+import {resolve} from 'path';
 
 export const copy = async () => {
     const sourceDirPath = resolve('src/fs/files');
