@@ -1,7 +1,9 @@
 import {readdir} from 'fs/promises';
+import {dirname, resolve} from 'path';
 
 export const list = async () => {
-    const filesDirPath = 'src/fs/files';
+    const currentFolderPath = dirname(new URL(import.meta.url).pathname);
+    const filesDirPath = resolve(currentFolderPath, 'files');
     try {
         const filesNames = await readdir(filesDirPath);
         console.log(filesNames);
