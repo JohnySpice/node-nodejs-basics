@@ -12,6 +12,7 @@
     "fs:list": "node src/fs/list.js",
     "fs:read": "node src/fs/read.js",
     "cli:env": "RSS_name1=value1 RSS_name2=value2 RSS_name3=value3 node src/cli/env.js",
+    "cli:env_windows": "set RSS_name1=value1&& set RSS_name2=value2&& set RSS_name3=value3&& node src/cli/env.js",
     "cli:args": "node src/cli/args.js --propName value --prop2Name value2 --prop3Name value3 --prop4Name value4",
     "hash:calcHash": "node src/hash/calcHash.js",
     "streams:read": "node src/streams/read.js",
@@ -20,7 +21,7 @@
     "zip:compress": "node src/zip/compress.js" ,
     "zip:decompress": "node src/zip/decompress.js",
     "wt:main": "node src/wt/main.js",
-    "wt:cp": "node src/cp/cp.js",
+    "cp:cp": "node src/cp/cp.js",
     "modules:cjsToEsm": "node src/modules/cjsToEsm.mjs"
   },
   "repository": {
