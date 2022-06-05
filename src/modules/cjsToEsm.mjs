@@ -21,7 +21,7 @@ console.log(`Release ${release()}`);
 console.log(`Version ${version()}`);
 console.log(`Path segment separator is "${path.sep}"`);
 console.log(`Path to current file is ${process.argv[1]}`);
-console.log(`Path to current directory is ${path.dirname(getPath(null))}`);
+console.log(`Path to current directory is ${getPath(null)}`);
 
 const createMyServer = createServerHttp((_, res) => {
     res.end('Request accepted');
