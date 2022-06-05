@@ -1,9 +1,8 @@
 import {rm} from 'fs/promises';
-import {dirname, resolve} from 'path';
+import {getPath} from '../utils/getPath.js';
 
 export const remove = async () => {
-    const currentFolderPath = dirname(new URL(import.meta.url).pathname);
-    const fileToRemove = resolve(currentFolderPath, 'files', 'fileToRemove.txt');
+    const fileToRemove = getPath(null, 'files', 'fileToRemove.txt');
     try {
         await rm(fileToRemove);
     } catch (e) {

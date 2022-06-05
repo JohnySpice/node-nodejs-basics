@@ -1,6 +1,6 @@
 import {cpus} from 'os';
-import {dirname, resolve} from 'path';
 import {Worker} from 'worker_threads';
+import {getPath} from '../utils/getPath.js';
 
 export const performCalculations = async () => {
     const cpuInfo = cpus();
@@ -13,8 +13,7 @@ export const performCalculations = async () => {
 
 async function createWorker(data) {
     return new Promise(res => {
-        const currentFolderPath = dirname(new URL(import.meta.url).pathname);
-        const worker = new Worker(resolve(currentFolderPath, 'worker.js'), {
+        const worker = new Worker(getPath(null, 'worker.js'), {
             workerData: data + 10,
         });
         worker.on('message', m => res({status: 'resolved', data: m}));

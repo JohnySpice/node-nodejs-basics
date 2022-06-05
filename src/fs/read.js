@@ -1,9 +1,8 @@
 import {readFile} from 'fs/promises'
-import {dirname, resolve} from 'path';
+import {getPath} from '../utils/getPath.js';
 
 export const read = async () => {
-    const currentFolderPath = dirname(new URL(import.meta.url).pathname);
-    const filePath = resolve(currentFolderPath, 'files', 'fileToRead.txt');
+    const filePath = getPath(null, 'files', 'fileToRead.txt');
     try {
         const data = await readFile(filePath, {encoding: 'utf8'});
         console.log(data);

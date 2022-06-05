@@ -20,7 +20,8 @@
     "zip:compress": "node src/zip/compress.js" ,
     "zip:decompress": "node src/zip/decompress.js",
     "wt:main": "node src/wt/main.js",
-    "wt:cp": "node src/cp/cp.js"
+    "wt:cp": "node src/cp/cp.js",
+    "modules:cjsToEsm": "node src/modules/cjsToEsm.mjs"
   },
   "repository": {
     "type": "git",
