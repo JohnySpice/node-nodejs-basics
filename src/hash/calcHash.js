@@ -9,3 +9,5 @@ export const calculateHash = async () => {
     hash.update(file);
     return hash.digest('hex');
 };
+
+calculateHash().then(value => console.log(value));

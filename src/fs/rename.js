@@ -10,3 +10,5 @@ export const rename = async () => {
     }
     await rn(resolve(filesDirPath, 'wrongFilename.txt'), resolve(filesDirPath, 'properFilename.md'));
 };
+
+rename();
