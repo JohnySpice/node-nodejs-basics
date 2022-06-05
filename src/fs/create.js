@@ -7,8 +7,10 @@ export const create = async () => {
     try {
         await access(filePath);
     } catch (e) {
-        const string = new Uint8Array(Buffer.from('I am fresh and young'));
+        const string = 'I am fresh and young';
         return await writeFile(filePath, string);
     }
     throw new Error('FS operation failed');
-}
+};
+
+create();
