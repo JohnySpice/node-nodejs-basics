@@ -13,7 +13,8 @@
     "fs:read": "node src/fs/read.js",
     "cli:env": "RSS_name1=value1 RSS_name2=value2 RSS_name3=value3 node src/cli/env.js",
     "cli:args": "node src/cli/args.js --propName value --prop2Name value2 --prop3Name value3 --prop4Name value4",
-    "hash:calcHash": "node src/hash/calcHash.js"
+    "hash:calcHash": "node src/hash/calcHash.js",
+    "streams:read": "node src/streams/read.js"
   },
   "repository": {
     "type": "git",
